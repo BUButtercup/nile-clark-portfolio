@@ -1,13 +1,276 @@
+/* @import '~antd/dist/antd.css'; */
+
+:root {
+  --dark: rgb(55, 55, 75);
+  --light: rgb(130, 245, 245);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: lightcyan;
+  max-width: 1350px;
+}
+
+@font-face {
+  font-family: 'Fredoka';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/fredoka/v6/X7nP4b87HvSqjb_WIi2yDCRwoQ_k7367_B-i2yQag0-mac3O8SL8EemMttxNbikt.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ubuntu/v15/4iCs6KVjbNBYlgoKfw72nU6AFw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ubuntu/v15/4iCv6KVjbNBYlgoCxCvjsGyNPYZvgw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  max-width: 1100px;
+  font-family: Ubuntu, Verdana, Geneva, Tahoma, sans-serif;
+  color:rgb(55, 55, 75);
+  display:flex;
+  flex-direction:column;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1.sb {
+  font-size: 3em;
+  font-weight: lighter;
+  width: 225px;
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  align-self: stretch;
+  padding: 5vh 3vw 0 5vw;
+}
+
+/***********************************************************/
+@media screen and (max-width: 770px){
+
+  body {
+      display: flex;
+      flex-direction: column;
+  }
+
+/*******header w/ nav*******/
+
+header {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dark);
+  width: 100%;
+}
+
+h1.Header-top {
+  color: var(--light);
+  background-image: url(./asset/images/wall-bluegreen.jpg);
+  margin-bottom: 1%;
+  font-size: 3em;
+  width: 100%
+}
+
+div.Header-avatar {
+  margin: 10px 10px;
+}
+
+
+.Header-bi1 {
+  display: none;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: stretch;
+  width:50%;
+}
+
+div.Header-navig {
+  width: 100%;
+}
+
+.Header-nav {
+  background-color: var(--dark);
+}
+
+.Header-a{
+  align-self: center;
+  margin: 0 5px 5px 5px;
+  background-color: var(--dark);
+  color: var(--light);
+  border-bottom: 2px solid rgb(130, 245, 245);
+}
+
+.Header-a:link {
+  text-decoration: none;
+  color: var(--light);
+}
+
+.Header-a:visited {
+  text-decoration: none;
+  color: var(--light);
+}
+
+
+
+/*************main*************/
+
+main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      width: 100%;
+}
+
+/***About me***/
+section.main-p1{
+  background-color:lightblue;
+  display: flex;
+  flex-direction:column;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+}
+
+h1.sb {
+  width: 100%;
+  font-size: 2em;
+  font-weight: lighter;
+  border-right: 0;
+  border-bottom: 3px solid var(--dark);
+  display: flex;
+  justify-content:center;
+  text-align: right;
+  align-self: stretch;
+  padding: 0;
+}
+
+#side {
+  width: 100%;
+  border-right: 0;
+}
+
+section.main-p1 p {
+  width: 100%;
+  align-self: stretch;
+  margin: 0;
+  padding-top: 10px;
+}
+
+div.big {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+/*******Work********/
+.proj-card {
+  width: 500px;
+  height: 300px;
+  background-color: var(--light);
+  margin: 30px
+}
+
+.mob {
+  width:100%;
+  background-color:lightseagreen;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content:flex-start;
+  border: 5px solid var(--light);
+  height: 15em;
+  margin: 0;
+}
+
+#sec2, #sec3, #sec4, #sec5, #sec6 {
+  margin: 0 10px 10px 10px;
+  padding: 0;
+}
+
+#sec2, #sec4 {
+  margin-bottom: -5px;;
+}
+
+#sec2 {
+  height: 17vh;
+}
+
+a.cap {
+  width: 100%;
+}
+
+div.big {
+  width: 100%;
+  display: flex;
+  align-content: center;
+}
+div.caption {
+  align-self: flex-start;
+  background-color: var(--light);
+}
+
+#sb3, #sb4 { /*these are place holders*/
+  display: none;
+}
+
+#si1, #si3 {
+  margin: 1em 0 0 0;
+}
+
+
+.smallboxes1, .smallboxes2 {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+/*************footer***********/
+footer {
+  flex-direction: column;
+  width: 100%;
+}
+
+.Footer-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  margin: 1em 0 2.5em 0;
+
+}
+
+.Footer-a{
+  align-self: center;
+  margin: 0 5px 5px 5px;
+  font-size: 1em;
+  font-weight: 700;
+  color: var(--dark);
+  border-bottom: 2px solid var(--dark);
+}
+
 }
