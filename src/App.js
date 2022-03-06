@@ -1,6 +1,5 @@
-import { BrowserRouter as Router, Switch, NavLink, Routes, Route, Link } from "react-router-dom";
-// import Footer from './components/Footer';
-// import Header from './components/Header'
+import { BrowserRouter as Router, NavLink, Routes, Route} from "react-router-dom";
+import React, {useState} from 'react'
 import './App.css';
 import Avatar from './asset/images/avatar_nile.png'
 import AboutMe from './components/AboutMe'
@@ -9,9 +8,10 @@ import Resume from './components/Resume'
 import Projects from "./components/Projects";
 
 function App() {
+
   return (
     <div className="App">
-              <header>
+        <header>
             <div className="Header">
                 <h1 className="Header-top">
                     Nile Clark
@@ -21,10 +21,10 @@ function App() {
                 </h1>
                 <div className="Header-navig">
                     <nav className="Header-nav">
-                        <NavLink className="Header-a" activeClassName="clicked" to="/">About Me</NavLink>
-                        <NavLink className="Header-a" activeClassName="clicked" to="/portfolio">Projects</NavLink>
-                        <NavLink className="Header-a" activeClassName="clicked" to="/contact">Contact Me</NavLink>
-                        <NavLink className="Header-a" activeClassName="clicked" to="/resume">Resume</NavLink>
+                        <NavLink className="Header-a" to="/">About Me</NavLink>
+                        <NavLink className="Header-a" to="/portfolio">Projects</NavLink>
+                        <NavLink className="Header-a" to="/contact">Contact Me</NavLink>
+                        <NavLink className="Header-a" to="/resume">Resume</NavLink>
                     </nav>
                 </div>
             </div>

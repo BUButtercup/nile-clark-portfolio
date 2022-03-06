@@ -24,11 +24,14 @@ h1.sb {
     height: 90%;
     display: flex;
     align-items: flex-end;
+    background-size: cover;
+    background-position: center;
 }
 
 .proj-card-img:hover{
     box-shadow: inset 0px 0px 70px 5px magenta;
 }
+
 
 .proj-place-holder {
     width: 90%;
@@ -36,7 +39,6 @@ h1.sb {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../../asset/images/wall-bluegreen.jpg);
 }
 
 .proj-ph-text {
@@ -52,27 +54,35 @@ h1.sb {
     padding: 5px;
     background-color: var(--dark);
     margin: 10px;
-    transition: opacity 500ms
+    opacity: 0;
+    transition: opacity 500ms;
+    /* height: 40%; */
 }
 
-.proj-text-box:hover {
+.proj-card-img:hover .proj-text-box {
     opacity: 1
 }
 
 .proj-text {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     background-color: var(--dark);
     color: var(--light);
     font-weight: bold;
-    background-color: transparent
+    background-color: transparent;
+    padding: 0;
+    line-height: 1.5rem;
+    margin: 0;
 }
 
 .proj-subtext {
-    font-size: 0.75rem;
+    font-size: 0.70rem;
     font-style: italic;
     background-color: var(--dark);
     color: var(--light);
     font-weight: bold;
-    background-color: transparent
+    background-color: transparent;
+    padding:0;
+    margin:0;
+    line-height: 1rem;
 
 }

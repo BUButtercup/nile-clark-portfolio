@@ -1,0 +1,22 @@
+h1.sb {
+    font-size: 3em;
+    font-weight: lighter;
+    width: 225px;
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+    align-self: stretch;
+    padding: 3vh 2vw;
+}
+
+.resume-box {
+    display: flex;
+    margin-top: 10vh;
+}
+
+.resume-body {
+    display: flex;
+    flex-direction: column;
+    border-left: 3px solid var(--dark);
+    padding: 20px;
+}

@@ -78,7 +78,7 @@ div.Header-navig {
 
 .Header-a:hover,
 .Header-a:active {
-    box-shadow: inset 0px 0px 10px 5px magenta;
+    box-shadow: inset 0px 0px 10px 5px magenta !important;
 }
 
 .Header-a:visited {
@@ -117,14 +117,16 @@ h2.Header-top{
 /***********Main*************/
 main {
     position: absolute;
-    top: 30vh;
+    width: 100%;
+    top: 20vh;
     overflow: auto;
+    height: 100%;
 }
 
 /********Footer*********/
 footer {
     width: 100%;
-    height: 5vh;
+    height: 10vh;
     display: flex;
     align-content: center;
     position: fixed;
