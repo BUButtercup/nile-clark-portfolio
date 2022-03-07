@@ -17,7 +17,7 @@ In the very near future, I will be getting the email function up and running for
 
 
 ## Instructions for Use
-<ol><li>Run 'npm i' to install the needed packages.</li><li>Enter your EmailJS service ID, template name, and user ID into the .env file to enable email.</li><li>If you wanted to put in your own project images and info, you will need to empty out the images file and replace it with your own screen shots, find the `images` array in the `Projects/index.js` file, import your images, and edit the information to include your project info.</li><li>When you are ready to test, run the command `npm run start`, and the app should begin in your browser.</li><li>Please reference the screenshots below for a visual of the pages, and visit the deployed Heroku link below:</li></ol>
+<ol><li>Run `npm i` to install the needed packages.</li><li>Enter your EmailJS service ID, template name, and user ID into the .env file to enable email.</li><li>If you wanted to put in your own project images and info, you will need to empty out the images file and replace it with your own screen shots, find the `images` array in the `Projects/index.js` file, import your images, and edit the information to include your project info.</li><li>When you are ready to test, run the command `npm run start`, and the app should begin in your browser.</li><li>Please reference the screenshots below for a visual of the pages, and visit the deployed Heroku link below:</li></ol>
 <br>
 Heroku: https://nile-clark-portfolio.herokuapp.com/
 <br>
@@ -25,7 +25,7 @@ Screenshots:
 <img src="./src/asset/images/portfolio-aboutme.png" alt="About Me page" title="About Me Page" width="700px">
 <img src="./src/asset/images/portfolio-portfolio-card.png" alt="Project page" title="Project Page" width="700px">
 <img src="./src/asset/images/portfolio-contact-me.png" alt="Contact Me page" title="Contact Me Page" width="700px">
-<img src="./src/asset/images/portfolio-resume.html" alt="Resume page" title="Resume Page" width="700px">
+<img src="./src/asset/images/portfolio-resume.png" alt="Resume page" title="Resume Page" width="700px">
 
 
 
