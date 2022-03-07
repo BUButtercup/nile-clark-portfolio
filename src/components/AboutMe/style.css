@@ -25,15 +25,15 @@ section.main-p1 {
     display: flex;
     align-items: center;
     width: 100%;
-    text-align: center;
+    /* text-align: center; */
     margin-top: 10vh;
 }
 
-p.AM-p {
+div.AM-p {
     width: 70%;
-    height: 30vh;
+    /* height: 30vh; */
     /* margin: 1em 3em; */
-    padding: 5vh 5vw;
+    padding: 0 3vw;
     font-size: 1.25em;
     border-left: 3px solid var(--dark);
     /* border: 1px solid red; */

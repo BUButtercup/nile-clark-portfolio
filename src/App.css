@@ -78,7 +78,7 @@ div.Header-navig {
 
 .Header-a:hover,
 .Header-a:active {
-    box-shadow: inset 0px 0px 10px 5px magenta !important;
+    box-shadow: inset 0px 0px 10px 5px var(--highlight) !important;
 }
 
 .Header-a:visited {
@@ -87,7 +87,12 @@ div.Header-navig {
 }
 
 .clicked {
-    box-shadow: inset 0px 0px 10px 5px magenta;
+    align-self: center;
+    margin: 2vw;
+    background-color: transparent;
+    color: var(--light);
+    border-bottom: 2px solid rgb(130, 245, 245);
+    box-shadow: inset 0px 0px 10px 5px var(--highlight);
 }
 
 div.Header-bi1 {
@@ -165,7 +170,7 @@ footer {
 
 .Footer-a:hover,
 .Footer-a:active {
-    box-shadow: inset 0px 0px 10px 1px magenta;
+    box-shadow: inset 0px 0px 10px 1px var(--highlight);
 }
 
 .Footer-a:visited {

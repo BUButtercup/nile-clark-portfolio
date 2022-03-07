@@ -20,7 +20,7 @@ h1.sb {
     flex-direction: column;
     border-left: 3px solid var(--dark);
     padding: 20px;
-    width:   50%
+    width:   60%
 }
 
 .contact-form p {
@@ -33,4 +33,21 @@ h1.sb {
     background-color: var(--dark);
     color: var(--light);
     font-weight: bold;
+  }
+
+  .form-alert-box {
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .form-alert {
+      font-size: 0.8rem;
+      color: red;
+      font-weight: bold;
+  }
+
+  .modal-title {
+      background-color: transparent;
+      font-weight: bold;
+      font-size: 2.5rem;
   }

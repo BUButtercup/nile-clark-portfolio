@@ -18,5 +18,40 @@ h1.sb {
     display: flex;
     flex-direction: column;
     border-left: 3px solid var(--dark);
-    padding: 20px;
+    padding: 2vh 3vw;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 4vh 4vw;
+    background-color: whitesmoke;
+    box-shadow: 5px 5px 15px slategray;
+}
+
+.card-title, .card-subtitle, .card-text, ul, li, span, em {
+    background-color: transparent;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card-text {
+    margin: 0;
+}
+
+hr {
+    width: 70%;
+    align-self: center;
+}
+
+.card a {
+    align-self: center;
+  }
+
+.card a .btn {
+background-color: var(--dark);
+color: var(--light);
+font-weight: bold;
 }

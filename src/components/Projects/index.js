@@ -88,7 +88,7 @@ const Projects = () => {
     return (
         <div style={{width: "100%", height: "100", display: "flex", marginBottom: "10vh", marginTop: "10vh"}}>
                 <h1 className="sb">My Projects</h1>
-                <div style={{display: "flex", borderLeft: " 3px solid var(--dark)"}}>
+                <div style={{display: "flex", borderLeft: " 3px solid var(--dark)", paddingLeft: "3vw"}}>
                         <div style={{display: "flex", flexWrap: "wrap"}}>
                            
 

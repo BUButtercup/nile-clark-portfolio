@@ -3,6 +3,7 @@
 :root {
   --dark: rgb(55, 55, 75);
   --light: rgb(130, 245, 245);
+  --highlight:  rgb(145, 112, 236);
 }
 
 * {

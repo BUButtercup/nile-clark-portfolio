@@ -24,12 +24,13 @@ h1.sb {
     height: 90%;
     display: flex;
     align-items: flex-end;
+    justify-content: center;
     background-size: cover;
     background-position: center;
 }
 
 .proj-card-img:hover{
-    box-shadow: inset 0px 0px 70px 5px magenta;
+    box-shadow: inset 0px 0px 70px 5px var(--highlight);
 }
 
 
@@ -56,7 +57,7 @@ h1.sb {
     margin: 10px;
     opacity: 0;
     transition: opacity 500ms;
-    /* height: 40%; */
+    border: 2px solid var(--light);
 }
 
 .proj-card-img:hover .proj-text-box {
