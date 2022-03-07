@@ -1,10 +1,13 @@
 import {useState, useRef} from 'react'
 import {Form, Button, Modal} from 'react-bootstrap'
 import "bootstrap/dist/css/bootstrap.min.css";
-import{ init, sendForm } from '@emailjs/browser';
+import{ sendForm } from '@emailjs/browser';
 import './style.css'
+import ContactModal from '../ContactModal'
 
 const Contact = () => {
+    const {REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID} = process.env;
+
     const [usernameShow, setUsernameShow] = useState('none');
     const [emailShow, setEmailShow] = useState('none');
     const [messageShow, setMessageShow] = useState('none');
@@ -15,6 +18,8 @@ const Contact = () => {
     const [message, setMessage] = useState('');
     const form = useRef();
 
+    const [openModal, setOpenModal] = useState(false)
+
     const validateEmail = e => {
         if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
             setEmailShow('inline')
@@ -22,6 +27,7 @@ const Contact = () => {
     }
 
     const handleInput = e => {
+        e.preventDefault();
         const {name, value} = e.target
         if(name === 'user_name'){
             setUsername(value)
@@ -29,35 +35,51 @@ const Contact = () => {
         if (name === 'user_email'){
             setEmail(value)
         } 
-        if(name==='message'){setMessage(value)}
+        if(name==='message'){
+            setMessage(value)
+        e.stopPropagation()}
     }
 
-    const sendMessage = (e) => {
+    const sendMessage = e => {
         e.preventDefault();
         if(!username){ 
-            setUsernameShow('inline')}
-        if (!email || !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
-            setEmailShow('inline')}
-        if (!message) {
-            setMessageShow('inline');}
+            setUsernameShow('inline')
+            return
         }
-        if (username && email && message){
-        // these IDs from the previous steps
-        sendForm('service_680yvon', 'contact_form', form.current, 'MtWifyBg-nF8ZrO1m')
+        if (!email){
+            setEmailShow('inline')
+            return
+        }
+        if (!message) {
+            setMessageShow('inline')
+            return
+        }
+        if (username && email && message && validateEmail()){
+        sendForm(REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, form.current, REACT_APP_USER_ID)
         .then((result) => {
             console.log(result.text);
+            if(result.text==='OK'){
+                setOpenModal(true)
+                setUsername('');
+                setEmail('');
+                setMessage('');
+            }
         }, (error) => {
             console.log(error.text);
         });
-   
+        }
     };
-// TODO: logic to validate email address
-// TODO: logic to validate other fields and pop up notices if they are left unfilled/block sending
+
+    const handleClose = e => {
+        e.preventDefault();
+        setOpenModal(false);
+    }
 
     return (
     
         <div>
 
+            <ContactModal show={openModal} onHide={handleClose}/>
             <div className="contact-box">
                 <div className="Footer-title"><h1 className="sb" id="sb5">Contact Me</h1></div>
                 <Form className='contact-form' ref={form} onSubmit={sendMessage}>
@@ -73,7 +95,7 @@ const Contact = () => {
                             <Form.Label>Email Address</Form.Label>
                             <p className="form-alert" style={{display: `${emailShow}`}}>This field is required. Please provide a valid email.</p>
                         </div>
-                        <Form.Control type="email" name="user_email" value={email} onChange={handleInput} onBlur={validateEmail} placeholder="name@example.com" />
+                        <Form.Control type="email" name="user_email" value={email} onChange={handleInput} onBlur={()=>validateEmail()} placeholder="name@example.com" />
                     </Form.Group>
                     <Form.Group className="mb-3" >
                         <div className="form-alert-box">
@@ -88,16 +110,7 @@ const Contact = () => {
                 
             </div>
 
-            <Modal.Dialog>
-                <Modal.Header closeButton>
-                    <Modal.Title>Success!</Modal.Title>
-                </Modal.Header>
 
-                <Modal.Body>
-                    <p>Your message has been sent.</p>
-                    <Button variant="secondary">Close</Button>
-                </Modal.Body>
-            </Modal.Dialog>
 
         </div>)
 
