@@ -1,9 +1,9 @@
 import {useState, useRef} from 'react'
-import {Form, Button, Modal} from 'react-bootstrap'
+// import {Form, Button, Modal} from 'react-bootstrap'
 import "bootstrap/dist/css/bootstrap.min.css";
 import{ sendForm } from '@emailjs/browser';
 import './style.css'
-import ContactModal from '../ContactModal'
+// import ContactModal from '../ContactModal'
 
 const Contact = () => {
     const {REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID} = process.env;
@@ -79,10 +79,17 @@ const Contact = () => {
     
         <div>
 
-            <ContactModal show={openModal} onHide={handleClose}/>
+            {/* <ContactModal show={openModal} onHide={handleClose}/> */}
             <div className="contact-box">
                 <div className="Footer-title"><h1 className="sb" id="sb5">Contact Me</h1></div>
-                <Form className='contact-form' ref={form} onSubmit={sendMessage}>
+                <div className='contact-form' >
+                    <h3>Call Me...</h3>
+                    <a className='com contact-link' href='tel:360-809-3790'>360.809.3790</a>
+                    <h3>Email Me...</h3> 
+                    <a className='com contact-link' href='mailto:n.clark.seattle@gmail.com'> n.clark.seattle@gmail.com </a>   
+                    <h3>Connect on <a className='contact-link' href='https://www.linkedin.com/in/nile-clark-029588190/' target='_blank' >LinkedIn</a> ...</h3>
+                </div>
+                {/* <Form className='contact-form' ref={form} onSubmit={sendMessage}>
                     <Form.Group className="mb-3" >
                         <div className="form-alert-box">
                             <Form.Label>Full Name</Form.Label>
@@ -107,7 +114,7 @@ const Contact = () => {
                     <p>Drop me a line if you'd like to talk about work! Please give me the details about what you're looking for. I'd love to discuss it with you!</p>
                     <Button type="submit" value="Send" >Send Message</Button>
                 </Form>
-                
+                 */}
             </div>
 
 

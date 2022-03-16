@@ -1,7 +1,23 @@
 .contact-box {
     display: flex;
     margin-top: 10vh;
+}
 
+.com {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.contact-link:link, .contact-link:visited {
+    align-self: flex-start;
+    padding: 0 5px;
+    color: var(--dark);
+    text-decoration:none;
+    background-color: var(--light);
+}
+.contact-link:hover {
+    color: var(--light);
+    background-color: var(--dark);
 }
 
 h1.sb {
