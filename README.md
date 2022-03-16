@@ -24,7 +24,7 @@ Heroku: https://nile-clark-portfolio.herokuapp.com/
 Screenshots:
 <img src="./src/asset/images/portfolio-aboutme.png" alt="About Me page" title="About Me Page" width="700px">
 <img src="./src/asset/images/portfolio-portfolio-card.png" alt="Project page" title="Project Page" width="700px">
-<img src="./src/asset/images/portfolio-contact-me.png" alt="Contact Me page" title="Contact Me Page" width="700px">
+<!-- <img src="./src/asset/images/portfolio-contact-me.png" alt="Contact Me page" title="Contact Me Page" width="700px"> -->
 <img src="./src/asset/images/portfolio-resume.png" alt="Resume page" title="Resume Page" width="700px">
 
 
