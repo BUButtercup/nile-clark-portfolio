@@ -1,8 +1,8 @@
 # Nile Clark, Professional Portfolio
 
-This is my React Portfolio. It has been deployed to Heroku for the moment, and will soon be deployed to my own domain name. It contains A short about me section, exemplars of my work to date, a "Contact Me" form (currently it is not sending email), and a downloadable version of my resume.
+This is my React Portfolio. It has been deployed to Heroku for the moment, and will soon be deployed to my own domain name. It contains A short about me section, exemplars of my work to date, a page sharing different ways to connect with me, and a downloadable version of my resume.
     
-In the very near future, I will be getting the email function up and running for my "Contact Me" form, and deploying to my own domain name.
+In the very near future, I will be deploying to my own domain name.
 
 ## Table of Contents
 * [Installation](#installation)
