@@ -1,5 +1,6 @@
-import { BrowserRouter as Router, NavLink, Routes, Route} from "react-router-dom";
-import React, {useState} from 'react'
+import { BrowserRouter as Router, NavLink, Routes, Route } from "react-router-dom";
+import React, { useState } from 'react'
+import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap'
 import './App.css';
 import Avatar from './asset/images/avatar_nile.png'
 import AboutMe from './components/AboutMe'
@@ -9,61 +10,77 @@ import Projects from "./components/Projects";
 
 function App() {
 
-  return (
-    <div className="App">
-        <header>
-            <div className="Header">
-                <h1 className="Header-top">
-                    Nile Clark
-                    <div className="Header-avatar">
-                        <img src={Avatar}/>
-                    </div>
-                </h1>
-                <div className="Header-navig">
-                    <nav className="Header-nav">
-                        <NavLink exact className={({isActive}) =>
-                                (isActive ? "clicked" : " Header-a")
+    return (
+        <Container fluid className="app-box pb-5">
+                <Navbar className="" expand="lg" fixed="top">
+                    <Container fluid className="nav-cont">
+                        <Navbar.Brand href="/">
+                            <h1 className="Header-top">
+                                Nile Clark
+                                <div className="Header-avatar">
+                                    <img src={Avatar} />
+                                </div>
+                            </h1>
+                        </Navbar.Brand>
+                        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                        <Navbar.Collapse id="basic-navbar-nav">
+                            <Nav className="me-auto Header-nav">
+                                <NavLink exact className={({ isActive }) =>
+                                    (isActive ? "clicked" : " Header-a")
                                 } to="/">About Me</NavLink>
-                        <NavLink className={({isActive}) =>
-                                (isActive ? "clicked" : " Header-a")
+                                <NavLink className={({ isActive }) =>
+                                    (isActive ? "clicked" : " Header-a")
                                 } to="/portfolio">Projects</NavLink>
-                        <NavLink className={({isActive}) =>
-                                (isActive ? "clicked" : " Header-a")
+                                <NavLink className={({ isActive }) =>
+                                    (isActive ? "clicked" : " Header-a")
                                 } to="/contact">Contact Me</NavLink>
-                        <NavLink className={({isActive}) =>
-                                (isActive ? "clicked" : " Header-a")
+                                <NavLink className={({ isActive }) =>
+                                    (isActive ? "clicked" : " Header-a")
                                 } to="/resume">Resume</NavLink>
-                    </nav>
-                </div>
-            </div>
-            <div className="Header-bi1">
-            
-                    <h2 className="Header-top">Professional Portfolio</h2>
-             
-            </div>
-        </header>
-        <main>
-        {/* <Switch> */}
-        <Routes>
-            <Route path="/portfolio" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/resume" element={<Resume />} />
-            <Route path="/" element={<AboutMe/>} />
-        </Routes>
-        {/* </Switch> */}
-        </main>
-        <footer>
-            {/* <h1 className="sb-mobile">Contact Me</h1> */}
+                                {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                                    <NavDropdown.Divider />
+                                    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                                </NavDropdown> */}
+                            </Nav>
+                        </Navbar.Collapse>
+                    </Container>
+                </Navbar>
+                {/* <div className="col-12 d-none d-lg-flex Header-bi1">
 
-            <nav className="Footer-nav">
-                <a href="https://github.com/BUButtercup" className="Footer-a">GitHub</a>
-                <a href="https://medium.com/" className="Footer-a">Medium</a>
-                <a href="https://codepen.io/N-Crocodile" className="Footer-a">CodePen</a>
-            </nav>
-        </footer> 
+                    <h2 className="Header-top">Est 2021</h2>
 
-    </div>
-  );
+                </div> */}
+    
+
+                <Routes>
+                    <Route path="/portfolio" element={<Projects />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/resume" element={<Resume />} />
+                    <Route path="/" element={<AboutMe />} />
+                </Routes>
+
+           
+           
+            <Navbar className="foot" fixed="bottom">
+                <Nav className="col-12 d-flex justify-content-center p-3">
+                    <Nav.Item>
+                        <Nav.Link className="Footer-a" href="https://github.com/BUButtercup" target="_blank">GitHub</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link className="Footer-a" href="https://medium.com/" target="_blank">Medium</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link className="Footer-a" href="https://codepen.io/N-Crocodile" target="_blank">CodePen</Nav.Link>
+                    </Nav.Item>
+                </Nav>
+                </Navbar>
+           
+
+        </Container>
+    );
 }
 
 export default App;

@@ -23,7 +23,7 @@ const ProjModal = (props) => {
         {/* </Modal.Title> */}
       </Modal.Header>
       <Modal.Body>
-        <div className="img-box">
+        <div className="img-box d-flex flex-column flex-lg-row">
         {props.image.url ? props.image.url.map(url=><div className="img-card"><img alt={props.image.title} src={url} style={{width: "300px", height: "250px"}}></img></div>) : null}
         </div>
      

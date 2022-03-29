@@ -77,7 +77,7 @@ const Contact = () => {
 
     return (
     
-        <div>
+        <section>
 
             {/* <ContactModal show={openModal} onHide={handleClose}/> */}
             <div className="contact-box">
@@ -119,7 +119,7 @@ const Contact = () => {
 
 
 
-        </div>)
+        </section>)
 
 }
 

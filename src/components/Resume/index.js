@@ -5,7 +5,7 @@ const Resume = () => {
 
 
     return (
-        <div className="resume-box">
+        <section className="resume-box">
             <h1 className="sb">My Resume</h1>
             <div className="resume-body">
                 <Card style={{ width: '90%',marginBottom: "10vh"}}>
@@ -66,7 +66,7 @@ const Resume = () => {
                 </Card>
             </div>
 
-        </div>)
+        </section>)
 
 }
 

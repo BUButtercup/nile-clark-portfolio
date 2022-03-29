@@ -1,4 +1,4 @@
-h1.sb {
+/* h1.sb {
     font-size: 3em;
     font-weight: lighter;
     width: 225px;
@@ -7,10 +7,15 @@ h1.sb {
     text-align: right;
     align-self: stretch;
     padding: 3vh 2vw;
+} */
+.proj-boxes {
+    display: flex;
+    border-left: 3px solid var(--dark); 
+    padding-left: 3vw;
 }
 
 .proj-card {
-    width: 280px;
+    width: 200px;
     height: 190px;
     display: flex;
     justify-content: center;
@@ -86,4 +91,14 @@ h1.sb {
     margin:0;
     line-height: 1rem;
 
+}
+
+
+@media screen and (max-width: 992px){
+    .sb  {
+        border-bottom: 3px solid var(--dark);
+    }
+    .proj-boxes {
+        border:none;
+    }
 }

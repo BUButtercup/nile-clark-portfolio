@@ -20,7 +20,7 @@
     background-color: var(--dark);
 }
 
-h1.sb {
+/* h1.sb {
     font-size: 3em;
     font-weight: lighter;
     width: 225px;
@@ -29,7 +29,7 @@ h1.sb {
     text-align: right;
     align-self: stretch;
     padding: 3vh 3vw;
-}
+} */
 
 .contact-form {
     display: flex;
