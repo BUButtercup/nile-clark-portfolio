@@ -109,12 +109,11 @@ const Projects = () => {
         buildPlaceholders()
 
         const sendInfo = e => {
-                // e.preventDefault();
+                e.preventDefault();
                 console.log('which image?', images[parseInt(e.target.tabIndex) - 1])
                 const clickedImg = images[parseInt(e.target.tabIndex) - 1]
                 setImage(clickedImg);
         }
-
 
         return (
                 <section className="container-fluid col-10 col-sm-9 h-100 mb-5">
@@ -127,9 +126,9 @@ const Projects = () => {
                                         {images.map(image =>
                                                 <div className="proj-card">
                                                         <div className="proj-card-img  btn" key={image.id} onMouseDown={sendInfo} onMouseUp={() => setModalShow(true)} tabIndex={image.id} style={{ backgroundImage: `url(${image.url[0]})` }}>
-                                                                <div className="proj-text-box" tabIndex={image.id} onMouseDown={sendInfo} onMouseUp={() => setModalShow(true)} >
-                                                                        <p className="proj-text" >{image.title}</p>
-                                                                        <p className="proj-subtext" >{image.languages}</p>
+                                                                <div className="proj-text-box" tabIndex={image.id} >
+                                                                        <p className="proj-text"  tabIndex={image.id} >{image.title}</p>
+                                                                        <p className="proj-subtext"  tabIndex={image.id} >{image.languages}</p>
                                                                 </div>
                                                         </div>
                                                 </div>

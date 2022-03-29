@@ -1,12 +1,12 @@
-import {useState, useRef} from 'react'
-// import {Form, Button, Modal} from 'react-bootstrap'
+import { useState, useRef } from 'react'
+import { Row, Form, Button, Modal } from 'react-bootstrap'
 import "bootstrap/dist/css/bootstrap.min.css";
-import{ sendForm } from '@emailjs/browser';
+import { sendForm } from '@emailjs/browser';
 import './style.css'
 // import ContactModal from '../ContactModal'
 
 const Contact = () => {
-    const {REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID} = process.env;
+    const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID } = process.env;
 
     const [usernameShow, setUsernameShow] = useState('none');
     const [emailShow, setEmailShow] = useState('none');
@@ -21,32 +21,33 @@ const Contact = () => {
     const [openModal, setOpenModal] = useState(false)
 
     const validateEmail = e => {
-        if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
+        if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
             setEmailShow('inline')
         }
     }
 
     const handleInput = e => {
         e.preventDefault();
-        const {name, value} = e.target
-        if(name === 'user_name'){
+        const { name, value } = e.target
+        if (name === 'user_name') {
             setUsername(value)
         }
-        if (name === 'user_email'){
+        if (name === 'user_email') {
             setEmail(value)
-        } 
-        if(name==='message'){
+        }
+        if (name === 'message') {
             setMessage(value)
-        e.stopPropagation()}
+            e.stopPropagation()
+        }
     }
 
     const sendMessage = e => {
         e.preventDefault();
-        if(!username){ 
+        if (!username) {
             setUsernameShow('inline')
             return
         }
-        if (!email){
+        if (!email) {
             setEmailShow('inline')
             return
         }
@@ -54,19 +55,19 @@ const Contact = () => {
             setMessageShow('inline')
             return
         }
-        if (username && email && message && validateEmail()){
-        sendForm(REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, form.current, REACT_APP_USER_ID)
-        .then((result) => {
-            console.log(result.text);
-            if(result.text==='OK'){
-                setOpenModal(true)
-                setUsername('');
-                setEmail('');
-                setMessage('');
-            }
-        }, (error) => {
-            console.log(error.text);
-        });
+        if (username && email && message && validateEmail()) {
+            sendForm(REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, form.current, REACT_APP_USER_ID)
+                .then((result) => {
+                    console.log(result.text);
+                    if (result.text === 'OK') {
+                        setOpenModal(true)
+                        setUsername('');
+                        setEmail('');
+                        setMessage('');
+                    }
+                }, (error) => {
+                    console.log(error.text);
+                });
         }
     };
 
@@ -76,20 +77,30 @@ const Contact = () => {
     }
 
     return (
-    
-        <section>
 
-            {/* <ContactModal show={openModal} onHide={handleClose}/> */}
-            <div className="contact-box">
-                <div className="Footer-title"><h1 className="sb" id="sb5">Contact Me</h1></div>
-                <div className='contact-form' >
-                    <h3>Call Me...</h3>
-                    <a className='com contact-link' href='tel:360-809-3790'>360.809.3790</a>
-                    <h3>Email Me...</h3> 
-                    <a className='com contact-link' href='mailto:n.clark.seattle@gmail.com'> n.clark.seattle@gmail.com </a>   
-                    <h3>Connect on <a className='contact-link' href='https://www.linkedin.com/in/nile-clark-029588190/' target='_blank' >LinkedIn</a> ...</h3>
-                </div>
-                {/* <Form className='contact-form' ref={form} onSubmit={sendMessage}>
+        <section className="container-fluid col-10 col-sm-9 h-100 mb-5">
+            <Row className="d-flex justify-content-center">
+
+                {/* <ContactModal show={openModal} onHide={handleClose}/> */}
+                {/* <div className="contact-box"> */}
+                <h1 className="col-10 col-lg-3 d-flex  justify-content-lg-end justify-content-center sb">Contact Me</h1>
+                <div className=" col-12 col-lg-7 AM-p text-center" >
+                    <div className="my-3">
+                        <h3>Call Me...</h3>
+                        <a className='com contact-link' href='tel:360-809-3790'>360.809.3790</a>
+                    </div>
+                    <div className="my-3">
+                        <h3>Email Me...</h3>
+                        <a className='com contact-link' href='mailto:n.clark.seattle@gmail.com'> n.clark.seattle@gmail.com </a>
+                    </div>
+                    <div className="my-3">
+                        <h3>Connect on <a className='contact-link' href='https://www.linkedin.com/in/nile-clark-029588190/' target='_blank' >LinkedIn</a> ...</h3>
+                    </div>
+
+
+
+                    {/* </div> */}
+                    {/* <Form className='contact-form' ref={form} onSubmit={sendMessage}>
                     <Form.Group className="mb-3" >
                         <div className="form-alert-box">
                             <Form.Label>Full Name</Form.Label>
@@ -115,8 +126,9 @@ const Contact = () => {
                     <Button type="submit" value="Send" >Send Message</Button>
                 </Form>
                  */}
-            </div>
 
+                </div>
+            </Row>
 
 
         </section>)

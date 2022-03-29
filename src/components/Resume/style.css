@@ -1,30 +1,20 @@
-/* h1.sb {
-    font-size: 3em;
-    font-weight: lighter;
-    width: 225px;
-    display: flex;
-    justify-content: flex-end;
-    text-align: right;
-    align-self: stretch;
-    padding: 3vh 2vw;
-} */
 
 .resume-box {
-    display: flex;
     margin-top: 10vh;
 }
 
+.card {
+    background-color: lightcyan;
+    border: none;
+}
+
 .resume-body {
-    display: flex;
-    flex-direction: column;
     border-left: 3px solid var(--dark);
-    padding: 2vh 3vw;
 }
 
 .card-body {
     display: flex;
     flex-direction: column;
-    padding: 4vh 4vw;
     background-color: whitesmoke;
     box-shadow: 5px 5px 15px slategray;
 }
@@ -54,4 +44,13 @@ hr {
 background-color: var(--dark);
 color: var(--light);
 font-weight: bold;
+}
+
+@media screen and (max-width: 992px){
+    .sb  {
+        border-bottom: 3px solid var(--dark);
+    }
+    .resume-body {
+        border:none;
+    }
 }
