@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b7f89793.css",
+    "main.js": "/static/js/main.befa0cbc.js",
+    "static/media/MovieMadness2.png": "/static/media/MovieMadness2.f0b08d89fdd476d17757.png",
+    "static/media/emerald_thumb.png": "/static/media/emerald_thumb.834458e1faa02815542c.png",
+    "static/media/emerald_thumb2.png": "/static/media/emerald_thumb2.8c9db1b36c8533c1d150.png",
+    "static/media/esale.png": "/static/media/esale.2053ff1b872c3bdcff2d.png",
+    "static/media/MovieMadness.png": "/static/media/MovieMadness.c1552ba59e5d5cfb6e25.png",
+    "static/media/RegexGist.png": "/static/media/RegexGist.3922a85a4903fcbf93e2.png",
+    "static/media/weather-dt.png": "/static/media/weather-dt.52cae2c481c1a5f0090f.png",
+    "static/media/team-site.png": "/static/media/team-site.4ef22a503a2e1059331d.png",
+    "static/media/SocialStack.png": "/static/media/SocialStack.e7216571ed8c7685ec3e.png",
+    "static/media/wall-bluegreen.jpg": "/static/media/wall-bluegreen.fff91abb033c5a31e27f.jpg",
+    "static/media/JS_Quiz2.png": "/static/media/JS_Quiz2.3b37e3ec5e811714974c.png",
+    "static/media/esale2.png": "/static/media/esale2.a14c9d05d3c8749dd726.png",
+    "static/media/team-site2.png": "/static/media/team-site2.a008ff2df375a0544220.png",
+    "static/media/weather-dt2.png": "/static/media/weather-dt2.420071a548c72ab5947b.png",
+    "static/media/avatar_nile.png": "/static/media/avatar_nile.087530f61c588eec3ffa.png",
+    "static/media/JS_Quiz.png": "/static/media/JS_Quiz.169755ec209931664f8a.png",
+    "index.html": "/index.html",
+    "main.b7f89793.css.map": "/static/css/main.b7f89793.css.map",
+    "main.befa0cbc.js.map": "/static/js/main.befa0cbc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b7f89793.css",
+    "static/js/main.befa0cbc.js"
+  ]
+}
