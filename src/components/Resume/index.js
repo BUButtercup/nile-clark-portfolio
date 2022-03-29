@@ -7,7 +7,7 @@ const Resume = () => {
     return (
         <section className="container-fluid col-10 col-sm-9 h-100 mb-5">
             <Row className="d-flex justify-content-center align-items-center">
-                <h1 className="col-10 col-lg-3 text-center text-lg-end sb">My Resume</h1>
+                <h1 className="col-10 col-lg-3 text-center align-self-lg-start text-lg-end sb">My Resume</h1>
                 <Card className="col-12 col-lg-9 m-0 resume-body ps-2 d-flex justify-content-center">
                     <Card.Body className="col-12 p-4">
                         <a href="https://drive.google.com/uc?id=1YvAmR3XxfZ3PQdYeg1BPcNuuO345kF1C&export=download"><Button>Download</Button></a>
