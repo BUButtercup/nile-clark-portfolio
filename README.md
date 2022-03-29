@@ -1,8 +1,8 @@
 # Nile Clark, Professional Portfolio
 
-This is my React Portfolio. It has been deployed to Heroku for the moment, and will soon be deployed to my own domain name. It contains A short about me section, exemplars of my work to date, a "Contact Me" form (currently it is not sending email), and a downloadable version of my resume.
+This is my React Portfolio. It has been deployed to Heroku for the moment, and will soon be deployed to my own domain name. It contains A short about me section, exemplars of my work to date, a page sharing different ways to connect with me, and a downloadable version of my resume.
     
-In the very near future, I will be getting the email function up and running for my "Contact Me" form, and deploying to my own domain name.
+In the very near future, I will be deploying to my own domain name.
 
 ## Table of Contents
 * [Installation](#installation)
@@ -24,7 +24,7 @@ Heroku: https://nile-clark-portfolio.herokuapp.com/
 Screenshots:
 <img src="./src/asset/images/portfolio-aboutme.png" alt="About Me page" title="About Me Page" width="700px">
 <img src="./src/asset/images/portfolio-portfolio-card.png" alt="Project page" title="Project Page" width="700px">
-<img src="./src/asset/images/portfolio-contact-me.png" alt="Contact Me page" title="Contact Me Page" width="700px">
+<!-- <img src="./src/asset/images/portfolio-contact-me.png" alt="Contact Me page" title="Contact Me Page" width="700px"> -->
 <img src="./src/asset/images/portfolio-resume.png" alt="Resume page" title="Resume Page" width="700px">
 
 
